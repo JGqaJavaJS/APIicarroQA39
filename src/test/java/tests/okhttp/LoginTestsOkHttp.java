@@ -1,4 +1,4 @@
-package tests;
+package tests.okhttp;
 
 import com.google.gson.Gson;
 import dto.AuthResponseDto;
