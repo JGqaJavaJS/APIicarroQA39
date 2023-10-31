@@ -1,8 +1,8 @@
 package api;
 
+import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import dto.AddNewCarDto;
-import dto.UserDto;
 
 import static com.jayway.restassured.RestAssured.given;
 
@@ -12,6 +12,7 @@ public class CarsApi extends BaseApi{
 
     private Response addNewCarRequest(AddNewCarDto addNewCarDto, String token) {
         return given()
+                .contentType(ContentType.JSON)
                 .header("Authorization", token)
                 .body(addNewCarDto)
                 .when()
@@ -22,7 +23,7 @@ public class CarsApi extends BaseApi{
         if(responseCreateNewCar == null) {
             responseCreateNewCar = addNewCarRequest(addNewCarDto, token);
         }
-        return responseCreateNewCar.getStatusCode();
+           return responseCreateNewCar.getStatusCode();
     }
 
     public void setResponseCreateNewCarNull() {

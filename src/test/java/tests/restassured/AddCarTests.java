@@ -3,6 +3,7 @@ package tests.restassured;
 import dto.AddNewCarDto;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.RandomUtils;
 
 public class AddCarTests extends BaseTest {
 
@@ -18,9 +19,9 @@ public class AddCarTests extends BaseTest {
     //  "about": "abc",
     //  "city": "Tel Aviv"
     //}
-
+String serNumber = "a5678" + RandomUtils.generateStringDigits(7);
     AddNewCarDto addNewCar = AddNewCarDto.builder()
-            .serialNumber("befibwihjza4")
+            .serialNumber(serNumber)
             .manufacture("opel")
             .model("corsa")
             .year(1990)
