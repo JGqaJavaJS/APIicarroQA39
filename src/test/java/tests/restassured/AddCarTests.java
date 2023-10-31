@@ -19,7 +19,7 @@ public class AddCarTests extends BaseTest {
     //  "about": "abc",
     //  "city": "Tel Aviv"
     //}
-String serNumber = "a5678" + RandomUtils.generateStringDigits(7);
+String serNumber = RandomUtils.generateStringDigits(11);
     AddNewCarDto addNewCar = AddNewCarDto.builder()
             .serialNumber(serNumber)
             .manufacture("opel")
