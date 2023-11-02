@@ -22,7 +22,7 @@ public class AddCarTests extends BaseTest {
 String serNumber = RandomUtils.generateStringDigits(11);
     AddNewCarDto addNewCar = AddNewCarDto.builder()
             .serialNumber(serNumber)
-            .manufacture("opel")
+            .manufacture("qa39")
             .model("corsa")
             .year(1990)
             .fuel("Petrol")
